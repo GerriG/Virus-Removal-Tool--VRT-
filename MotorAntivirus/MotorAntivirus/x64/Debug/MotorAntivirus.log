@@ -1,0 +1,5 @@
+﻿  Assembling ..\motor.asm...
+  pch.cpp
+  dllmain.cpp
+     Creando biblioteca C:\Users\adona\source\repos\MotorAntivirus\x64\Debug\MotorAntivirus.lib y objeto C:\Users\adona\source\repos\MotorAntivirus\x64\Debug\MotorAntivirus.exp
+  MotorAntivirus.vcxproj -> C:\Users\adona\source\repos\MotorAntivirus\x64\Debug\MotorAntivirus.dll

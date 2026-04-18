@@ -1,0 +1,1 @@
+Inyectar archivo reshacker_Virus en la carpeta a analizar para probar el funcionamiento ante un virus

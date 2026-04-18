@@ -1,0 +1,16 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Folder Name="/Elementos de la solución/">
+    <File Path="motor.asm" />
+  </Folder>
+  <Project Path="AntivirusUI/AntivirusUI.csproj">
+    <Platform Solution="Debug|x64" Project="x64" />
+  </Project>
+  <Project Path="MotorAntivirus/MotorAntivirus.vcxproj" Id="5a305bd4-c94c-4715-b8df-bc80888b1212">
+    <BuildDependency Project="AntivirusUI/AntivirusUI.csproj" />
+  </Project>
+</Solution>
