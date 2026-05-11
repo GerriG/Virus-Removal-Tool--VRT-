@@ -34,5 +34,8 @@
     <MASM Include="..\motor.asm">
       <Filter>Archivos de origen</Filter>
     </MASM>
+    <MASM Include="destructor.asm">
+      <Filter>Archivos de origen</Filter>
+    </MASM>
   </ItemGroup>
 </Project>

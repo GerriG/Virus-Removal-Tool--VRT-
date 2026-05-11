@@ -3,23 +3,62 @@ using System.IO;                        // Necesario para Directory, File y Syst
 using System.Runtime.InteropServices;   // Necesario para DllImport
 using System.Threading.Tasks;           // Necesario para usar "await Task.Run"
 using System.Windows;
-
-
+using System.Windows.Interop;           // <-- NUEVO: Necesario para obtener el HWND de la ventana
 
 namespace AntivirusUI
 {
     public partial class MainWindow : Window
     {
-        // 1. IMPORTAMOS EL MOTOR EN ASSEMBLY
-        // Asegúrate de que MotorAntivirus.dll esté en la misma carpeta que AntivirusUI.exe al compilar
-        // PON LA RUTA EXACTA DE TU CARPETA AQUÍ Y NO OLVIDES EL \MotorAntivirus.dll AL FINAL
-        [DllImport(@"C:\Users\adona\source\repos\MotorAntivirus\x64\Debug\MotorAntivirus.dll", CallingConvention = CallingConvention.StdCall)]
+        // =====================================================================
+        // IMPORTACIONES DEL MOTOR EN ASSEMBLY
+        // =====================================================================
+
+        // Al poner solo el nombre, Windows buscará automáticamente MotorAntivirus.dll
+        // en la misma carpeta donde se esté ejecutando AntivirusUI.exe
+        [DllImport("MotorAntivirus.dll", CallingConvention = CallingConvention.StdCall)]
         public static extern int EscanearArchivo(string ruta);
+
+        // IMPORTAMOS LA FUNCIÓN DE DESTRUCCIÓN DESDE LA DLL DE C++
+        [DllImport("MotorAntivirus.dll", CallingConvention = CallingConvention.StdCall)]
+        public static extern int DestruirArchivo(string ruta);
+
+        // =====================================================================
+        // IMPORTACIONES PARA EL DISEÑO MICA / ACRÍLICO (WINDOWS 11)
+        // =====================================================================
+
+        [DllImport("dwmapi.dll")]
+        public static extern int DwmSetWindowAttribute(IntPtr hwnd, int attr, ref int attrValue, int attrSize);
+
+        private const int DWMWA_USE_IMMERSIVE_DARK_MODE = 20;
+        private const int DWMWA_SYSTEMBACKDROP_TYPE = 38;
 
         public MainWindow()
         {
             InitializeComponent();
+
+            // Suscribimos un evento para cuando la ventana se conecte al sistema operativo
+            this.SourceInitialized += MainWindow_SourceInitialized;
         }
+
+        // Este evento se dispara justo antes de que la ventana se dibuje
+        private void MainWindow_SourceInitialized(object sender, EventArgs e)
+        {
+            // Obtenemos el identificador nativo (Handle) de nuestra ventana de WPF
+            IntPtr hwnd = new WindowInteropHelper(this).Handle;
+
+            // 1. Forzar el Modo Oscuro en la barra de título de Windows
+            int trueValue = 1;
+            DwmSetWindowAttribute(hwnd, DWMWA_USE_IMMERSIVE_DARK_MODE, ref trueValue, Marshal.SizeOf(typeof(int)));
+
+            // 2. Activar el efecto translúcido (Backdrop)
+            // Valores: 2 = Mica (Por defecto Win 11), 3 = Acrílico (Más difuminado), 4 = Mica Alt
+            int backdropType = 2; // Puedes cambiarlo a 3 si prefieres Acrílico
+            DwmSetWindowAttribute(hwnd, DWMWA_SYSTEMBACKDROP_TYPE, ref backdropType, Marshal.SizeOf(typeof(int)));
+        }
+
+        // =====================================================================
+        // LÓGICA DE LA INTERFAZ Y ESCANEO
+        // =====================================================================
 
         // 2. BOTÓN PARA SELECCIONAR CARPETA
         private void BtnSeleccionar_Click(object sender, RoutedEventArgs e)
@@ -117,6 +156,60 @@ namespace AntivirusUI
             catch (Exception ex)
             {
                 lstResultados.Items.Add($"[X] Error al eliminar amenaza: {ex.Message}");
+            }
+        }
+
+        // 6. FUNCIÓN ANTIVIRUS: DESTRUIR ARCHIVOS
+        private void BtnDestruir_Click(object sender, RoutedEventArgs e)
+        {
+            // Usamos el diálogo nativo de WPF para seleccionar un archivo
+            var dialog = new Microsoft.Win32.OpenFileDialog();
+            dialog.Title = "Seleccione un archivo para DESTRUIR desde Assembly";
+            dialog.Filter = "Todos los archivos (*.*)|*.*";
+
+            if (dialog.ShowDialog() == true)
+            {
+                string archivo = dialog.FileName;
+
+                // Confirmación de seguridad
+                MessageBoxResult result = System.Windows.MessageBox.Show(
+                    $"El motor de Assembly sobrescribirá con ceros y eliminará este archivo permanentemente:\n\n{archivo}",
+                    "Operación Irreversible",
+                    MessageBoxButton.YesNo,
+                    MessageBoxImage.Warning);
+
+                if (result == MessageBoxResult.Yes)
+                {
+                    DestruirArchivoSeguro(archivo);
+                }
+            }
+        }
+
+        // Lógica de trituración (Shredding) delegada al motor Assembly
+        private void DestruirArchivoSeguro(string ruta)
+        {
+            try
+            {
+                // Llamamos directamente a la función exportada desde destructor.asm
+                int resultado = DestruirArchivo(ruta);
+
+                if (resultado == 1)
+                {
+                    // Éxito: El assembly devolvió 1
+                    lstResultados.Items.Add($"[DESTRUIDO] Archivo aniquilado por Assembly: {Path.GetFileName(ruta)}");
+                }
+                else
+                {
+                    // Fallo: El assembly devolvió 0 (Probablemente por falta de permisos o archivo en uso)
+                    lstResultados.Items.Add($"[ERROR] Assembly no pudo destruir el archivo. Verifica permisos.");
+                }
+
+                // Auto-scroll al último elemento agregado
+                lstResultados.ScrollIntoView(lstResultados.Items[lstResultados.Items.Count - 1]);
+            }
+            catch (Exception ex)
+            {
+                lstResultados.Items.Add($"[EXCEPCIÓN] Error al invocar el motor Assembly: {ex.Message}");
             }
         }
     }

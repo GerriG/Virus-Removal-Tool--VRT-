@@ -169,6 +169,7 @@
     <MASM Include="..\motor.asm">
       <FileType>Document</FileType>
     </MASM>
+    <MASM Include="destructor.asm" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

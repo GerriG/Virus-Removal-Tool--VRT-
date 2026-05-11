@@ -8,23 +8,23 @@
     "net10.0-windows": []
   },
   "packageFolders": {
-    "C:\\Users\\adona\\.nuget\\packages\\": {},
+    "C:\\Users\\gerri\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\adona\\source\\repos\\MotorAntivirus\\AntivirusUI\\AntivirusUI.csproj",
+      "projectUniqueName": "C:\\Users\\gerri\\Documents\\GitHub\\Virus-Removal-Tool--VRT-\\MotorAntivirus\\AntivirusUI\\AntivirusUI.csproj",
       "projectName": "AntivirusUI",
-      "projectPath": "C:\\Users\\adona\\source\\repos\\MotorAntivirus\\AntivirusUI\\AntivirusUI.csproj",
-      "packagesPath": "C:\\Users\\adona\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\adona\\source\\repos\\MotorAntivirus\\AntivirusUI\\obj\\",
+      "projectPath": "C:\\Users\\gerri\\Documents\\GitHub\\Virus-Removal-Tool--VRT-\\MotorAntivirus\\AntivirusUI\\AntivirusUI.csproj",
+      "packagesPath": "C:\\Users\\gerri\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\gerri\\Documents\\GitHub\\Virus-Removal-Tool--VRT-\\MotorAntivirus\\AntivirusUI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\adona\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\gerri\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
