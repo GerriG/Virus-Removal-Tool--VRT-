@@ -1,14 +1,21 @@
-﻿using System.Configuration;
-using System.Data;
-using System.Windows;
+﻿using System.Windows;
 
 namespace AntivirusUI
 {
-    /// <summary>
-    /// Interaction logic for App.xaml
-    /// </summary>
     public partial class App : System.Windows.Application
     {
-    }
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            // 1. Habilitar estilos visuales (Soluciona los iconos planos/viejos)
+            System.Windows.Forms.Application.EnableVisualStyles();
 
+            // 2. Mejorar renderizado de texto
+            System.Windows.Forms.Application.SetCompatibleTextRenderingDefault(false);
+
+            // 3. Forzar procesamiento de mensajes de Windows
+            System.Windows.Forms.Application.DoEvents();
+
+            base.OnStartup(e);
+        }
+    }
 }

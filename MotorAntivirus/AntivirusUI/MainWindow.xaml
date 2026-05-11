@@ -71,12 +71,19 @@
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Row="0" Margin="0,0,0,30" HorizontalAlignment="Center">
-            <TextBlock Text="MOTOR ANTIVIRUS" Foreground="#FFFFFF" FontSize="28" FontWeight="Bold" HorizontalAlignment="Center">
-                <TextBlock.Effect>
-                    <DropShadowEffect BlurRadius="10" ShadowDepth="2" Opacity="0.5"/>
-                </TextBlock.Effect>
-            </TextBlock>
-            <TextBlock Text="ESCÁNER DE MALWARE Y DESTRUCTOR x64" Foreground="#00FF41" FontSize="13" FontWeight="SemiBold" HorizontalAlignment="Center" Margin="0,5,0,0"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock Text="&#xEA18;" FontFamily="Segoe Fluent Icons, Segoe MDL2 Assets" Foreground="#FFFFFF" FontSize="32" Margin="0,0,10,0" VerticalAlignment="Center">
+                    <TextBlock.Effect>
+                        <DropShadowEffect BlurRadius="10" ShadowDepth="2" Opacity="0.5"/>
+                    </TextBlock.Effect>
+                </TextBlock>
+                <TextBlock Text="Virus Removal Tool" Foreground="#FFFFFF" FontSize="28" FontWeight="Bold" VerticalAlignment="Center">
+                    <TextBlock.Effect>
+                        <DropShadowEffect BlurRadius="10" ShadowDepth="2" Opacity="0.5"/>
+                    </TextBlock.Effect>
+                </TextBlock>
+            </StackPanel>
+            <TextBlock Text="ESCÁNER DE MALWARE Y DESTRUCTOR ASSEMBLY" Foreground="#00FF41" FontSize="13" FontWeight="SemiBold" HorizontalAlignment="Center" Margin="0,5,0,0"/>
         </StackPanel>
 
         <Border Grid.Row="1" Background="#66000000" CornerRadius="12" Padding="20" Margin="0,0,0,25"
@@ -87,9 +94,27 @@
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <TextBox x:Name="txtRuta" Width="380" Height="40" FontSize="14" IsReadOnly="True" VerticalContentAlignment="Center" Margin="0,0,15,0"/>
-                <Button x:Name="btnSeleccionar" Content="Elegir Carpeta" Width="110" Height="40" Background="#555555" Click="BtnSeleccionar_Click" Margin="0,0,10,0"/>
-                <Button x:Name="btnEscanear" Content="ESCANEAR" Width="110" Height="40" Background="#2563EB" Click="BtnEscanear_Click" Margin="0,0,10,0"/>
-                <Button x:Name="btnDestruir" Content="Destruir Archivo" Width="125" Height="40" Background="#DC2626" Click="BtnDestruir_Click"/>
+
+                <Button x:Name="btnSeleccionar" Width="120" Height="40" Background="#555555" Click="BtnSeleccionar_Click" Margin="0,0,10,0">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="&#xE8B7;" FontFamily="Segoe Fluent Icons, Segoe MDL2 Assets" FontSize="16" Margin="0,0,8,0" VerticalAlignment="Center"/>
+                        <TextBlock Text="Elegir Carpeta" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
+
+                <Button x:Name="btnEscanear" Width="110" Height="40" Background="#2563EB" Click="BtnEscanear_Click" Margin="0,0,10,0">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="&#xE814;" FontFamily="Segoe Fluent Icons, Segoe MDL2 Assets" FontSize="16" Margin="0,0,8,0" VerticalAlignment="Center"/>
+                        <TextBlock Text="Escanear" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
+
+                <Button x:Name="btnDestruir" Width="135" Height="40" Background="#DC2626" Click="BtnDestruir_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="&#xE74D;" FontFamily="Segoe Fluent Icons, Segoe MDL2 Assets" FontSize="16" Margin="0,0,8,0" VerticalAlignment="Center"/>
+                        <TextBlock Text="Destruir Archivo" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
             </StackPanel>
         </Border>
 

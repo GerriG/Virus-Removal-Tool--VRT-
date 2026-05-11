@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AntivirusUI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7522a5da3c1701c4db26866fb76a83988e235067")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a6157fcb375af75a642c1798f2fe5fccc7876028")]
 [assembly: System.Reflection.AssemblyProductAttribute("AntivirusUI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AntivirusUI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

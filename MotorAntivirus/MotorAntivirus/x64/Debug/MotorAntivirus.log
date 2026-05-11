@@ -1,1 +1,6 @@
-﻿
+﻿  Assembling ..\motor.asm...
+  Assembling destructor.asm...
+  pch.cpp
+  dllmain.cpp
+     Creando biblioteca C:\Users\gerri\Documents\GitHub\Virus-Removal-Tool--VRT-\MotorAntivirus\x64\Debug\MotorAntivirus.lib y objeto C:\Users\gerri\Documents\GitHub\Virus-Removal-Tool--VRT-\MotorAntivirus\x64\Debug\MotorAntivirus.exp
+  MotorAntivirus.vcxproj -> C:\Users\gerri\Documents\GitHub\Virus-Removal-Tool--VRT-\MotorAntivirus\x64\Debug\MotorAntivirus.dll
