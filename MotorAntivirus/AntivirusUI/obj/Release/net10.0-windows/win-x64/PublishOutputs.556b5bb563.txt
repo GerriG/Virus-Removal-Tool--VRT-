@@ -1,0 +1,8 @@
+C:\Users\gerri\Downloads\VirusRemovalTool\AntivirusUI.pdb
+C:\Users\gerri\Downloads\VirusRemovalTool\MotorAntivirus.dll
+C:\Users\gerri\Downloads\VirusRemovalTool\D3DCompiler_47_cor3.dll
+C:\Users\gerri\Downloads\VirusRemovalTool\PenImc_cor3.dll
+C:\Users\gerri\Downloads\VirusRemovalTool\PresentationNative_cor3.dll
+C:\Users\gerri\Downloads\VirusRemovalTool\vcruntime140_cor3.dll
+C:\Users\gerri\Downloads\VirusRemovalTool\wpfgfx_cor3.dll
+C:\Users\gerri\Downloads\VirusRemovalTool\AntivirusUI.exe

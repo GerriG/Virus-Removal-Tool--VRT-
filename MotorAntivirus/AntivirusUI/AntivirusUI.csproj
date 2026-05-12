@@ -12,7 +12,15 @@
 
 		<Platforms>AnyCPU;x64</Platforms>
 
+		<ApplicationIcon>VRT.ico</ApplicationIcon>
+		
+		<EnableCompressionInSingleFile>True</EnableCompressionInSingleFile>
+
 	</PropertyGroup>
+
+	<ItemGroup>
+	  <Content Include="VRT.ico" />
+	</ItemGroup>
 
 	<ItemGroup>
 	  <None Update="MotorAntivirus.dll">
