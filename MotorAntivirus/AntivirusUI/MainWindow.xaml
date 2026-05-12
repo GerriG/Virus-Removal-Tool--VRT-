@@ -1,131 +1,91 @@
-﻿<Window x:Class="AntivirusUI.MainWindow"
+﻿<ui:FluentWindow x:Class="AntivirusUI.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Motor Antivirus - Lenguaje de Máquina" Height="550" Width="880"
-        Background="Transparent" 
-        WindowStartupLocation="CenterScreen"
-        FontFamily="Segoe UI">
+        xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+        Title="Virus Removal Tool" Height="550" Width="880"
+        MinWidth="800" MinHeight="500"
+        WindowBackdropType="Mica"
+        ExtendsContentIntoTitleBar="True"
+        WindowStartupLocation="CenterScreen">
 
-    <WindowChrome.WindowChrome>
-        <WindowChrome GlassFrameThickness="-1" CaptionHeight="30" UseAeroCaptionButtons="True"/>
-    </WindowChrome.WindowChrome>
-
-    <Window.Resources>
-        <Style TargetType="Button">
-            <Setter Property="Foreground" Value="White"/>
-            <Setter Property="FontWeight" Value="SemiBold"/>
-            <Setter Property="Cursor" Value="Hand"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="Button">
-                        <Border Background="{TemplateBinding Background}" CornerRadius="8">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        </Border>
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Opacity" Value="0.85"/>
-                            </Trigger>
-                            <Trigger Property="IsPressed" Value="True">
-                                <Setter Property="Opacity" Value="0.7"/>
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-
-        <Style TargetType="TextBox">
-            <Setter Property="Foreground" Value="#E0E0E0"/>
-            <Setter Property="CaretBrush" Value="White"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="TextBox">
-                        <Border Background="#66000000" BorderBrush="#444" BorderThickness="1" CornerRadius="8">
-                            <ScrollViewer x:Name="PART_ContentHost" Margin="10,0"/>
-                        </Border>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-
-        <Style TargetType="ListBoxItem">
-            <Setter Property="Padding" Value="0,4"/>
-            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="ListBoxItem">
-                        <Border Background="Transparent">
-                            <ContentPresenter/>
-                        </Border>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-    </Window.Resources>
-
-    <Grid Margin="30">
+    <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <StackPanel Grid.Row="0" Margin="0,0,0,30" HorizontalAlignment="Center">
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <TextBlock Text="&#xEA18;" FontFamily="Segoe Fluent Icons, Segoe MDL2 Assets" Foreground="#FFFFFF" FontSize="32" Margin="0,0,10,0" VerticalAlignment="Center">
-                    <TextBlock.Effect>
-                        <DropShadowEffect BlurRadius="10" ShadowDepth="2" Opacity="0.5"/>
-                    </TextBlock.Effect>
-                </TextBlock>
-                <TextBlock Text="Virus Removal Tool" Foreground="#FFFFFF" FontSize="28" FontWeight="Bold" VerticalAlignment="Center">
-                    <TextBlock.Effect>
-                        <DropShadowEffect BlurRadius="10" ShadowDepth="2" Opacity="0.5"/>
-                    </TextBlock.Effect>
-                </TextBlock>
+        <ui:TitleBar Grid.Row="0" Title="Virus Removal Tool" />
+
+        <Grid Grid.Row="1" Margin="30,10,30,30">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0" Margin="0,0,0,30" HorizontalAlignment="Center">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,5">
+                    <ui:SymbolIcon Symbol="Shield24" FontSize="36" Foreground="#FFFFFF" Margin="0,0,10,0"/>
+                    <TextBlock Text="Virus Removal Tool" Foreground="#FFFFFF" FontSize="28" FontWeight="Bold" VerticalAlignment="Center"/>
+                </StackPanel>
+                <TextBlock Text="ESCÁNER DE MALWARE Y DESTRUCTOR ASSEMBLY" Foreground="#00FF41" FontSize="13" FontWeight="SemiBold" HorizontalAlignment="Center"/>
             </StackPanel>
-            <TextBlock Text="ESCÁNER DE MALWARE Y DESTRUCTOR ASSEMBLY" Foreground="#00FF41" FontSize="13" FontWeight="SemiBold" HorizontalAlignment="Center" Margin="0,5,0,0"/>
-        </StackPanel>
 
-        <Border Grid.Row="1" Background="#66000000" CornerRadius="12" Padding="20" Margin="0,0,0,25"
-                BorderBrush="#33ffffff" BorderThickness="1">
-            <Border.Effect>
-                <DropShadowEffect BlurRadius="15" ShadowDepth="3" Opacity="0.3" Color="Black"/>
-            </Border.Effect>
+            <Border Grid.Row="1" Background="#44000000" CornerRadius="8" Padding="20" Margin="0,0,0,25"
+                    BorderBrush="#22FFFFFF" BorderThickness="1">
 
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <TextBox x:Name="txtRuta" Width="380" Height="40" FontSize="14" IsReadOnly="True" VerticalContentAlignment="Center" Margin="0,0,15,0"/>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
 
-                <Button x:Name="btnSeleccionar" Width="120" Height="40" Background="#555555" Click="BtnSeleccionar_Click" Margin="0,0,10,0">
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="&#xE8B7;" FontFamily="Segoe Fluent Icons, Segoe MDL2 Assets" FontSize="16" Margin="0,0,8,0" VerticalAlignment="Center"/>
-                        <TextBlock Text="Elegir Carpeta" VerticalAlignment="Center"/>
-                    </StackPanel>
-                </Button>
+                    <ui:TextBox Grid.Column="0" x:Name="txtRuta" Height="40" FontSize="14" IsReadOnly="True" PlaceholderText="Seleccione una ruta..." Margin="0,0,15,0" VerticalAlignment="Center"/>
 
-                <Button x:Name="btnEscanear" Width="110" Height="40" Background="#2563EB" Click="BtnEscanear_Click" Margin="0,0,10,0">
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="&#xE814;" FontFamily="Segoe Fluent Icons, Segoe MDL2 Assets" FontSize="16" Margin="0,0,8,0" VerticalAlignment="Center"/>
-                        <TextBlock Text="Escanear" VerticalAlignment="Center"/>
-                    </StackPanel>
-                </Button>
+                    <ui:Button Grid.Column="1" x:Name="btnSeleccionar" Height="40" Padding="15,0" Click="BtnSeleccionar_Click" Margin="0,0,10,0" VerticalAlignment="Center">
+                        <StackPanel Orientation="Horizontal">
+                            <ui:SymbolIcon Symbol="FolderOpen24" FontSize="18" Margin="0,0,8,0" VerticalAlignment="Center"/>
+                            <TextBlock Text="Elegir Carpeta" VerticalAlignment="Center" FontWeight="SemiBold"/>
+                        </StackPanel>
+                    </ui:Button>
 
-                <Button x:Name="btnDestruir" Width="135" Height="40" Background="#DC2626" Click="BtnDestruir_Click">
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="&#xE74D;" FontFamily="Segoe Fluent Icons, Segoe MDL2 Assets" FontSize="16" Margin="0,0,8,0" VerticalAlignment="Center"/>
-                        <TextBlock Text="Destruir Archivo" VerticalAlignment="Center"/>
-                    </StackPanel>
-                </Button>
-            </StackPanel>
-        </Border>
+                    <ui:Button Grid.Column="2" x:Name="btnEscanear" Height="40" Padding="15,0" Click="BtnEscanear_Click" Margin="0,0,10,0" VerticalAlignment="Center" Appearance="Primary">
+                        <StackPanel Orientation="Horizontal">
+                            <ui:SymbolIcon Symbol="Search24" FontSize="18" Margin="0,0,8,0" VerticalAlignment="Center"/>
+                            <TextBlock Text="Escanear" VerticalAlignment="Center" FontWeight="SemiBold"/>
+                        </StackPanel>
+                    </ui:Button>
 
-        <Border Grid.Row="2" Background="#99000000" CornerRadius="12" BorderBrush="#33ffffff" BorderThickness="1" Padding="15">
-            <Border.Effect>
-                <DropShadowEffect BlurRadius="10" ShadowDepth="2" Opacity="0.4" Color="Black"/>
-            </Border.Effect>
+                    <ui:Button Grid.Column="3" x:Name="btnDestruir" Height="40" Padding="15,0" Click="BtnDestruir_Click" VerticalAlignment="Center" Appearance="Danger">
+                        <StackPanel Orientation="Horizontal">
+                            <ui:SymbolIcon Symbol="Delete24" FontSize="18" Margin="0,0,8,0" VerticalAlignment="Center"/>
+                            <TextBlock Text="Destruir Archivo" VerticalAlignment="Center" FontWeight="SemiBold"/>
+                        </StackPanel>
+                    </ui:Button>
+                </Grid>
+            </Border>
 
-            <ListBox x:Name="lstResultados" Background="Transparent" BorderThickness="0"
-                     Foreground="#00FF41" FontFamily="Consolas" FontSize="14"
-                     ScrollViewer.HorizontalScrollBarVisibility="Disabled"/>
-        </Border>
+            <Border Grid.Row="2" Background="#88000000" CornerRadius="8" BorderBrush="#22FFFFFF" BorderThickness="1" Padding="15">
+                <ListBox x:Name="lstResultados" Background="Transparent" BorderThickness="0"
+                         ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+
+                    <ListBox.ItemContainerStyle>
+                        <Style TargetType="ListBoxItem" BasedOn="{StaticResource {x:Type ListBoxItem}}">
+                            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+                            <Setter Property="Padding" Value="0"/>
+                            <Setter Property="Margin" Value="0,3"/>
+                        </Style>
+                    </ListBox.ItemContainerStyle>
+
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding}" Foreground="#00FF41" FontFamily="Consolas" FontSize="14" TextWrapping="Wrap"/>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </Border>
+        </Grid>
     </Grid>
-</Window>
+</ui:FluentWindow>

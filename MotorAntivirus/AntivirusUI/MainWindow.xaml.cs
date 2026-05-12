@@ -3,14 +3,15 @@ using System.IO;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Interop;
+using System.Windows.Controls; // Agregado para usar TextBlock
+using Wpf.Ui.Controls; // Controles modernos WinUI 3
 
 namespace AntivirusUI
 {
-    public partial class MainWindow : Window
+    public partial class MainWindow : FluentWindow
     {
         // =====================================================================
-        // IMPORTACIONES DEL MOTOR EN ASSEMBLY
+        // IMPORTACIONES DEL MOTOR EN ASSEMBLY (P/Invoke)
         // =====================================================================
 
         [DllImport("MotorAntivirus.dll", CallingConvention = CallingConvention.StdCall)]
@@ -19,39 +20,9 @@ namespace AntivirusUI
         [DllImport("MotorAntivirus.dll", CallingConvention = CallingConvention.StdCall)]
         public static extern int DestruirArchivo(string ruta);
 
-        // =====================================================================
-        // IMPORTACIONES PARA EL DISEÑO MICA / ACRÍLICO (WINDOWS 11)
-        // =====================================================================
-
-        [DllImport("dwmapi.dll")]
-        public static extern int DwmSetWindowAttribute(IntPtr hwnd, int attr, ref int attrValue, int attrSize);
-
-        private const int DWMWA_USE_IMMERSIVE_DARK_MODE = 20;
-        private const int DWMWA_SYSTEMBACKDROP_TYPE = 38;
-
         public MainWindow()
         {
-            // FIX DEL CRASH: Encendemos el motor visual para TaskDialog
-            System.Windows.Forms.Application.EnableVisualStyles();
-
             InitializeComponent();
-            this.SourceInitialized += MainWindow_SourceInitialized;
-        }
-
-        private void MainWindow_SourceInitialized(object sender, EventArgs e)
-        {
-            IntPtr hwnd = new WindowInteropHelper(this).Handle;
-            int trueValue = 1;
-            DwmSetWindowAttribute(hwnd, DWMWA_USE_IMMERSIVE_DARK_MODE, ref trueValue, Marshal.SizeOf(typeof(int)));
-
-            int backdropType = 2; // 2 = Mica, 3 = Acrílico
-            DwmSetWindowAttribute(hwnd, DWMWA_SYSTEMBACKDROP_TYPE, ref backdropType, Marshal.SizeOf(typeof(int)));
-
-            HwndSource source = HwndSource.FromHwnd(hwnd);
-            if (source != null && source.CompositionTarget != null)
-            {
-                source.CompositionTarget.BackgroundColor = System.Windows.Media.Colors.Transparent;
-            }
         }
 
         // =====================================================================
@@ -60,10 +31,14 @@ namespace AntivirusUI
 
         private void BtnSeleccionar_Click(object sender, RoutedEventArgs e)
         {
-            var dialog = new System.Windows.Forms.FolderBrowserDialog();
-            if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            var dialog = new Microsoft.Win32.OpenFolderDialog
             {
-                txtRuta.Text = dialog.SelectedPath;
+                Title = "Selecciona la carpeta a escanear"
+            };
+
+            if (dialog.ShowDialog() == true)
+            {
+                txtRuta.Text = dialog.FolderName;
                 lstResultados.Items.Clear();
             }
         }
@@ -74,17 +49,55 @@ namespace AntivirusUI
 
             if (string.IsNullOrEmpty(rutaBase) || !Directory.Exists(rutaBase))
             {
-                IntPtr hwnd = new WindowInteropHelper(this).Handle;
-                var page = new System.Windows.Forms.TaskDialogPage()
+                var msgBox = new Wpf.Ui.Controls.MessageBox
                 {
-                    Caption = "Motor Antivirus",
-                    Heading = "Acción Requerida",
-                    Text = "Por favor, selecciona una carpeta válida antes de iniciar el escaneo.",
-                    Icon = System.Windows.Forms.TaskDialogIcon.Information
+                    Owner = this,
+                    Title = "Virus Removal Tool",
+                    Content = new Wpf.Ui.Controls.TextBlock
+                    {
+                        Text = "Por favor, selecciona una carpeta válida antes de iniciar el escaneo.",
+                        TextAlignment = TextAlignment.Left,
+                        TextWrapping = TextWrapping.Wrap
+                    },
+                    PrimaryButtonText = "Seleccionar carpeta", // Botón útil (Acción principal)
+                    CloseButtonText = "¡Entendido!",           // Botón para simplemente cerrar
+
+                    // Bloqueo estricto de redimensión:
+                    Width = 450,
+                    MinWidth = 450,
+                    MaxWidth = 450,
+                    Height = 160,
+                    MinHeight = 160,
+                    MaxHeight = 160
                 };
-                System.Windows.Forms.TaskDialog.ShowDialog(hwnd, page);
-                return;
+
+                var result = await msgBox.ShowDialogAsync();
+
+                if (result == Wpf.Ui.Controls.MessageBoxResult.Primary)
+                {
+                    // 1. Abrimos la ventana de elegir carpeta reutilizando tu método
+                    BtnSeleccionar_Click(sender, e);
+
+                    // 2. Refrescamos nuestra variable con lo que el usuario eligió
+                    rutaBase = txtRuta.Text;
+
+                    // 3. Verificamos si el usuario de verdad eligió algo o si canceló la ventana
+                    if (string.IsNullOrEmpty(rutaBase) || !Directory.Exists(rutaBase))
+                    {
+                        return; // Abortar: Canceló el explorador de archivos
+                    }
+                }
+                else
+                {
+                    return; // Abortar: Presionó "¡Entendido!" o cerró el MessageBox
+                }
             }
+
+            // =========================================================
+            // Si el código llega hasta aquí, ES SEGURO que tenemos una ruta válida
+            // (ya sea porque la puso al inicio o porque la acaba de seleccionar).
+            // Comenzamos el escaneo inmediatamente.
+            // =========================================================
 
             btnEscanear.IsEnabled = false;
             lstResultados.Items.Add($"[*] Iniciando escaneo en: {rutaBase}");
@@ -151,37 +164,43 @@ namespace AntivirusUI
             }
         }
 
-        private void BtnDestruir_Click(object sender, RoutedEventArgs e)
+        private async void BtnDestruir_Click(object sender, RoutedEventArgs e)
         {
-            var dialog = new Microsoft.Win32.OpenFileDialog();
-            dialog.Title = "Seleccione un archivo para DESTRUIR desde Assembly";
-            dialog.Filter = "Todos los archivos (*.*)|*.*";
+            var dialog = new Microsoft.Win32.OpenFileDialog
+            {
+                Title = "Seleccione un archivo para DESTRUIR desde Assembly",
+                Filter = "Todos los archivos (*.*)|*.*"
+            };
 
             if (dialog.ShowDialog() == true)
             {
                 string archivo = dialog.FileName;
 
-                IntPtr hwnd = new WindowInteropHelper(this).Handle;
-
-                var btnDestruirArchivo = new System.Windows.Forms.TaskDialogButton("Sí, destruir archivo");
-                var btnCancelar = System.Windows.Forms.TaskDialogButton.Cancel;
-
-                var page = new System.Windows.Forms.TaskDialogPage()
+                var msgBox = new Wpf.Ui.Controls.MessageBox
                 {
-                    Caption = "Advertencia de Seguridad",
-                    Heading = "Operación Irreversible",
-                    Text = $"El motor de Assembly sobrescribirá con ceros y eliminará permanentemente este archivo:\n\n{archivo}",
-
-                    // Cambia esto para usar el escudo de advertencia moderno
-                    Icon = System.Windows.Forms.TaskDialogIcon.ShieldWarningYellowBar,
-
-                    Buttons = { btnCancelar, btnDestruirArchivo },
-                    DefaultButton = btnCancelar
+                    Owner = this,
+                    Title = "Advertencia de Seguridad",
+                    Content = new Wpf.Ui.Controls.TextBlock
+                    {
+                        Text = $"El motor de Assembly sobrescribirá con ceros y eliminará permanentemente este archivo:\n\n{archivo}",
+                        TextAlignment = TextAlignment.Left,
+                        TextWrapping = TextWrapping.Wrap
+                    },
+                    PrimaryButtonText = "Sí, destruir archivo",
+                    CloseButtonText = "Cancelar",
+                    PrimaryButtonAppearance = ControlAppearance.Danger,
+                    // Bloqueo estricto de redimensión:
+                    Width = 500,
+                    MinWidth = 500,
+                    MaxWidth = 500,
+                    Height = 215,
+                    MinHeight = 215,
+                    MaxHeight = 215
                 };
 
-                var result = System.Windows.Forms.TaskDialog.ShowDialog(hwnd, page);
+                var result = await msgBox.ShowDialogAsync();
 
-                if (result == btnDestruirArchivo)
+                if (result == Wpf.Ui.Controls.MessageBoxResult.Primary)
                 {
                     DestruirArchivoSeguro(archivo);
                 }

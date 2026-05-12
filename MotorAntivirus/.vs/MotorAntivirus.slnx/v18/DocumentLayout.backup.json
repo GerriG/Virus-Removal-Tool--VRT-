@@ -3,40 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\gerri\\Documents\\GitHub\\Virus-Removal-Tool--VRT-\\MotorAntivirus\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0EB60659-3640-8F4F-3335-E6F404DF75FE}|AntivirusUI\\AntivirusUI.csproj|c:\\users\\gerri\\documents\\github\\virus-removal-tool--vrt-\\motorantivirus\\antivirusui\\antivirusui.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{0EB60659-3640-8F4F-3335-E6F404DF75FE}|AntivirusUI\\AntivirusUI.csproj|solutionrelative:antivirusui\\antivirusui.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{0EB60659-3640-8F4F-3335-E6F404DF75FE}|AntivirusUI\\AntivirusUI.csproj|c:\\users\\gerri\\documents\\github\\virus-removal-tool--vrt-\\motorantivirus\\antivirusui\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0EB60659-3640-8F4F-3335-E6F404DF75FE}|AntivirusUI\\AntivirusUI.csproj|solutionrelative:antivirusui\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0EB60659-3640-8F4F-3335-E6F404DF75FE}|AntivirusUI\\AntivirusUI.csproj|c:\\users\\gerri\\documents\\github\\virus-removal-tool--vrt-\\motorantivirus\\antivirusui\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{0EB60659-3640-8F4F-3335-E6F404DF75FE}|AntivirusUI\\AntivirusUI.csproj|solutionrelative:antivirusui\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0EB60659-3640-8F4F-3335-E6F404DF75FE}|AntivirusUI\\AntivirusUI.csproj|c:\\users\\gerri\\documents\\github\\virus-removal-tool--vrt-\\motorantivirus\\antivirusui\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0EB60659-3640-8F4F-3335-E6F404DF75FE}|AntivirusUI\\AntivirusUI.csproj|solutionrelative:antivirusui\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0EB60659-3640-8F4F-3335-E6F404DF75FE}|AntivirusUI\\AntivirusUI.csproj|c:\\users\\gerri\\documents\\github\\virus-removal-tool--vrt-\\motorantivirus\\antivirusui\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0EB60659-3640-8F4F-3335-E6F404DF75FE}|AntivirusUI\\AntivirusUI.csproj|solutionrelative:antivirusui\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0EB60659-3640-8F4F-3335-E6F404DF75FE}|AntivirusUI\\AntivirusUI.csproj|c:\\users\\gerri\\documents\\github\\virus-removal-tool--vrt-\\motorantivirus\\antivirusui\\antivirusui.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{0EB60659-3640-8F4F-3335-E6F404DF75FE}|AntivirusUI\\AntivirusUI.csproj|solutionrelative:antivirusui\\antivirusui.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+      "AbsoluteMoniker": "D:0:0:{0EB60659-3640-8F4F-3335-E6F404DF75FE}|AntivirusUI\\AntivirusUI.csproj|c:\\users\\gerri\\documents\\github\\virus-removal-tool--vrt-\\motorantivirus\\antivirusui\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{0EB60659-3640-8F4F-3335-E6F404DF75FE}|AntivirusUI\\AntivirusUI.csproj|solutionrelative:antivirusui\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5A305BD4-C94C-4715-B8DF-BC80888B1212}|MotorAntivirus\\MotorAntivirus.vcxproj|C:\\Users\\gerri\\Documents\\GitHub\\Virus-Removal-Tool--VRT-\\MotorAntivirus\\motor.asm||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{5A305BD4-C94C-4715-B8DF-BC80888B1212}|MotorAntivirus\\MotorAntivirus.vcxproj|solutionrelative:motor.asm||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0EB60659-3640-8F4F-3335-E6F404DF75FE}|AntivirusUI\\AntivirusUI.csproj|c:\\users\\gerri\\documents\\github\\virus-removal-tool--vrt-\\motorantivirus\\antivirusui\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{0EB60659-3640-8F4F-3335-E6F404DF75FE}|AntivirusUI\\AntivirusUI.csproj|solutionrelative:antivirusui\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{5A305BD4-C94C-4715-B8DF-BC80888B1212}|MotorAntivirus\\MotorAntivirus.vcxproj|C:\\Users\\gerri\\Documents\\GitHub\\Virus-Removal-Tool--VRT-\\MotorAntivirus\\MotorAntivirus\\destructor.asm||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{5A305BD4-C94C-4715-B8DF-BC80888B1212}|MotorAntivirus\\MotorAntivirus.vcxproj|solutionrelative:MotorAntivirus\\destructor.asm||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EB60659-3640-8F4F-3335-E6F404DF75FE}|AntivirusUI\\AntivirusUI.csproj|c:\\users\\gerri\\documents\\github\\virus-removal-tool--vrt-\\motorantivirus\\antivirusui\\antivirusui.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{0EB60659-3640-8F4F-3335-E6F404DF75FE}|AntivirusUI\\AntivirusUI.csproj|solutionrelative:antivirusui\\antivirusui.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EB60659-3640-8F4F-3335-E6F404DF75FE}|AntivirusUI\\AntivirusUI.csproj|c:\\users\\gerri\\documents\\github\\virus-removal-tool--vrt-\\motorantivirus\\antivirusui\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0EB60659-3640-8F4F-3335-E6F404DF75FE}|AntivirusUI\\AntivirusUI.csproj|solutionrelative:antivirusui\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EB60659-3640-8F4F-3335-E6F404DF75FE}|AntivirusUI\\AntivirusUI.csproj|c:\\users\\gerri\\documents\\github\\virus-removal-tool--vrt-\\motorantivirus\\antivirusui\\antivirusui.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{0EB60659-3640-8F4F-3335-E6F404DF75FE}|AntivirusUI\\AntivirusUI.csproj|solutionrelative:antivirusui\\antivirusui.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0EB60659-3640-8F4F-3335-E6F404DF75FE}|AntivirusUI\\AntivirusUI.csproj|c:\\users\\gerri\\documents\\github\\virus-removal-tool--vrt-\\motorantivirus\\antivirusui\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0EB60659-3640-8F4F-3335-E6F404DF75FE}|AntivirusUI\\AntivirusUI.csproj|solutionrelative:antivirusui\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5A305BD4-C94C-4715-B8DF-BC80888B1212}|MotorAntivirus\\MotorAntivirus.vcxproj|C:\\Users\\gerri\\Documents\\GitHub\\Virus-Removal-Tool--VRT-\\MotorAntivirus\\MotorAntivirus\\destructor.asm||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{5A305BD4-C94C-4715-B8DF-BC80888B1212}|MotorAntivirus\\MotorAntivirus.vcxproj|solutionrelative:MotorAntivirus\\destructor.asm||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5A305BD4-C94C-4715-B8DF-BC80888B1212}|MotorAntivirus\\MotorAntivirus.vcxproj|C:\\Users\\gerri\\Documents\\GitHub\\Virus-Removal-Tool--VRT-\\MotorAntivirus\\MotorAntivirus\\dllmain.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -61,58 +61,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "motor.asm",
               "DocumentMoniker": "C:\\Users\\gerri\\Documents\\GitHub\\Virus-Removal-Tool--VRT-\\MotorAntivirus\\motor.asm",
               "RelativeDocumentMoniker": "motor.asm",
               "ToolTip": "C:\\Users\\gerri\\Documents\\GitHub\\Virus-Removal-Tool--VRT-\\MotorAntivirus\\motor.asm",
               "RelativeToolTip": "motor.asm",
-              "ViewState": "AgIAAGkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2026-04-18T15:05:54.177Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Users\\gerri\\Documents\\GitHub\\Virus-Removal-Tool--VRT-\\MotorAntivirus\\AntivirusUI\\App.xaml",
-              "RelativeDocumentMoniker": "AntivirusUI\\App.xaml",
-              "ToolTip": "C:\\Users\\gerri\\Documents\\GitHub\\Virus-Removal-Tool--VRT-\\MotorAntivirus\\AntivirusUI\\App.xaml",
-              "RelativeToolTip": "AntivirusUI\\App.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-04-18T15:50:31.555Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "App.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\gerri\\Documents\\GitHub\\Virus-Removal-Tool--VRT-\\MotorAntivirus\\AntivirusUI\\App.xaml.cs",
-              "RelativeDocumentMoniker": "AntivirusUI\\App.xaml.cs",
-              "ToolTip": "C:\\Users\\gerri\\Documents\\GitHub\\Virus-Removal-Tool--VRT-\\MotorAntivirus\\AntivirusUI\\App.xaml.cs",
-              "RelativeToolTip": "AntivirusUI\\App.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-18T16:26:23.706Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AntivirusUI.csproj",
-              "DocumentMoniker": "C:\\Users\\gerri\\Documents\\GitHub\\Virus-Removal-Tool--VRT-\\MotorAntivirus\\AntivirusUI\\AntivirusUI.csproj",
-              "RelativeDocumentMoniker": "AntivirusUI\\AntivirusUI.csproj",
-              "ToolTip": "C:\\Users\\gerri\\Documents\\GitHub\\Virus-Removal-Tool--VRT-\\MotorAntivirus\\AntivirusUI\\AntivirusUI.csproj",
-              "RelativeToolTip": "AntivirusUI\\AntivirusUI.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-04-18T15:21:45.91Z",
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -140,7 +102,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 4,
               "Title": "destructor.asm",
               "DocumentMoniker": "C:\\Users\\gerri\\Documents\\GitHub\\Virus-Removal-Tool--VRT-\\MotorAntivirus\\MotorAntivirus\\destructor.asm",
               "RelativeDocumentMoniker": "MotorAntivirus\\destructor.asm",
@@ -164,19 +126,43 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "AntivirusUI",
               "DocumentMoniker": "C:\\Users\\gerri\\Documents\\GitHub\\Virus-Removal-Tool--VRT-\\MotorAntivirus\\AntivirusUI\\AntivirusUI.csproj",
               "RelativeDocumentMoniker": "AntivirusUI\\AntivirusUI.csproj",
               "ToolTip": "C:\\Users\\gerri\\Documents\\GitHub\\Virus-Removal-Tool--VRT-\\MotorAntivirus\\AntivirusUI\\AntivirusUI.csproj",
               "RelativeToolTip": "AntivirusUI\\AntivirusUI.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-04-18T16:10:54.44Z",
+              "WhenOpened": "2026-04-18T16:10:54.44Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\gerri\\Documents\\GitHub\\Virus-Removal-Tool--VRT-\\MotorAntivirus\\AntivirusUI\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "AntivirusUI\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\gerri\\Documents\\GitHub\\Virus-Removal-Tool--VRT-\\MotorAntivirus\\AntivirusUI\\MainWindow.xaml.cs*",
+              "RelativeToolTip": "AntivirusUI\\MainWindow.xaml.cs*",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAiwGwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-18T15:17:24.768Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
+              "Title": "AntivirusUI.csproj",
+              "DocumentMoniker": "C:\\Users\\gerri\\Documents\\GitHub\\Virus-Removal-Tool--VRT-\\MotorAntivirus\\AntivirusUI\\AntivirusUI.csproj",
+              "RelativeDocumentMoniker": "AntivirusUI\\AntivirusUI.csproj",
+              "ToolTip": "C:\\Users\\gerri\\Documents\\GitHub\\Virus-Removal-Tool--VRT-\\MotorAntivirus\\AntivirusUI\\AntivirusUI.csproj",
+              "RelativeToolTip": "AntivirusUI\\AntivirusUI.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-04-18T15:21:45.91Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "AssemblyInfo.cs",
               "DocumentMoniker": "C:\\Users\\gerri\\Documents\\GitHub\\Virus-Removal-Tool--VRT-\\MotorAntivirus\\AntivirusUI\\AssemblyInfo.cs",
               "RelativeDocumentMoniker": "AntivirusUI\\AssemblyInfo.cs",
@@ -184,21 +170,31 @@
               "RelativeToolTip": "AntivirusUI\\AssemblyInfo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-12T00:37:48.111Z",
+              "WhenOpened": "2026-05-12T00:37:48.111Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\gerri\\Documents\\GitHub\\Virus-Removal-Tool--VRT-\\MotorAntivirus\\AntivirusUI\\App.xaml",
+              "RelativeDocumentMoniker": "AntivirusUI\\App.xaml",
+              "ToolTip": "C:\\Users\\gerri\\Documents\\GitHub\\Virus-Removal-Tool--VRT-\\MotorAntivirus\\AntivirusUI\\App.xaml",
+              "RelativeToolTip": "AntivirusUI\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-04-18T15:50:31.555Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\gerri\\Documents\\GitHub\\Virus-Removal-Tool--VRT-\\MotorAntivirus\\AntivirusUI\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "AntivirusUI\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\gerri\\Documents\\GitHub\\Virus-Removal-Tool--VRT-\\MotorAntivirus\\AntivirusUI\\MainWindow.xaml.cs",
-              "RelativeToolTip": "AntivirusUI\\MainWindow.xaml.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAA2wCQAAAAMAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\gerri\\Documents\\GitHub\\Virus-Removal-Tool--VRT-\\MotorAntivirus\\AntivirusUI\\App.xaml.cs",
+              "RelativeDocumentMoniker": "AntivirusUI\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\gerri\\Documents\\GitHub\\Virus-Removal-Tool--VRT-\\MotorAntivirus\\AntivirusUI\\App.xaml.cs",
+              "RelativeToolTip": "AntivirusUI\\App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-18T15:17:24.768Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-18T16:26:23.706Z"
             },
             {
               "$type": "Document",
