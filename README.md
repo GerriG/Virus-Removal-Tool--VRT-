@@ -42,7 +42,7 @@ Para emular el funcionamiento de una solución de seguridad real, el motor de As
 
 **💎 Nueva Interfaz con Efecto Mica, Layout Responsivo y Consola de Alto Contraste:**
 <br>
-<img width="880" height="550" alt="Captura de pantalla VRT Principal" src="https://github.com/user-attachments/assets/dd416bb2-cbab-43d6-bc3f-b92986e8d340" />
+<img width="880" height="550" alt="Captura de pantalla 2026-05-12 200408" src="https://github.com/user-attachments/assets/5bb6fb2b-5ad8-4f61-b433-d40ee0973841" />
 <br>
 
 **🤖 Diálogo Inteligente de Validación (Flujo Zero-Click):**
